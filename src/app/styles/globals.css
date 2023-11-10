@@ -1,3 +1,10 @@
+:root {
+  --main-grey: #363636;
+  --sub-grey: #686868;
+  --main-green: #00462a;
+  --main-white: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
