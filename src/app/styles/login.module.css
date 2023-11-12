@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .box {
@@ -10,6 +12,15 @@
   align-items: center;
   flex-direction: column;
   background-color: var(--main-white);
+  width: 70%;
+  height: 50%;
+  padding: 0 17% 0 17%;
+}
+
+.inputBox {
+  width: 100%;
+  margin-bottom: 19px;
+  aspect-ratio: 12;
 }
 
 .title {

@@ -1,6 +1,7 @@
 'use client';
 
 import styles from '@/app/styles/login.module.css';
+import fonts from '@/app/styles/fonts.module.css';
 import { useState } from 'react';
 
 export default function Join() {
@@ -80,15 +81,45 @@ export default function Join() {
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <div className={styles.title}>회원가입</div>
-        <input type="text" id="name" placeholder="이름" onChange={handleInputName} />
-        <input type="text" id="schoolNum" placeholder="학번" onChange={handleInputSchoolNum} />
+        <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
+        <input
+          className={`${styles.inputBox} ${fonts.placeholder}`}
+          type="text"
+          id="name"
+          placeholder="이름"
+          onChange={handleInputName}
+        />
+        <input
+          className={`${styles.inputBox} ${fonts.placeholder}`}
+          type="text"
+          id="schoolNum"
+          placeholder="학번"
+          onChange={handleInputSchoolNum}
+        />
         <div>(ex.2071022)</div>
-        <input type="text" id="id" placeholder="아이디" onChange={handleInputId} />
+        <input
+          className={`${styles.inputBox} ${fonts.placeholder}`}
+          type="text"
+          id="id"
+          placeholder="아이디"
+          onChange={handleInputId}
+        />
         <div>{validateIdMsg}</div>
-        <input type="password" id="pwd" placeholder="비밀번호" onChange={handleInputPwd} />
+        <input
+          className={`${styles.inputBox} ${fonts.placeholder}`}
+          type="password"
+          id="pwd"
+          placeholder="비밀번호"
+          onChange={handleInputPwd}
+        />
         <div>{validatePwdMsg}</div>
-        <input type="password" id="rePwd" placeholder="비밀번호 확인" onChange={handleInputRePwd} />
+        <input
+          className={`${styles.inputBox} ${fonts.placeholder}`}
+          type="password"
+          id="rePwd"
+          placeholder="비밀번호 확인"
+          onChange={handleInputRePwd}
+        />
         <div>{validateRePwdMsg}</div>
         <button className={styles.btn}>회원가입</button>
       </div>

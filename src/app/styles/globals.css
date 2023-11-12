@@ -9,14 +9,29 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'PretendardM';
+  src: url('/public/fonts/Pretendard-Medium.otf');
+}
+
+@font-face {
+  font-family: 'PretendardR';
+  src: url('/public/fonts/Pretendard-Regular.otf');
+}
+
 html,
 body {
+  width: 100%;
+  height: 100vh;
+
   padding: 0;
   margin: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-size: 15px;
 
   background-color: #f2f2f2;
   -ms-overflow-style: none;
