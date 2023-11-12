@@ -85,11 +85,11 @@ export default function Join() {
         <input type="text" id="schoolNum" placeholder="학번" onChange={handleInputSchoolNum} />
         <div>(ex.2071022)</div>
         <input type="text" id="id" placeholder="아이디" onChange={handleInputId} />
-        {isValidateId ? <div>{validateIdMsg}</div> : <></>}
+        <div>{validateIdMsg}</div>
         <input type="password" id="pwd" placeholder="비밀번호" onChange={handleInputPwd} />
-        {isValidatePwd ? <div>{validatePwdMsg}</div> : <></>}
+        <div>{validatePwdMsg}</div>
         <input type="password" id="rePwd" placeholder="비밀번호 확인" onChange={handleInputRePwd} />
-        {isValidateRePwd ? <div>{validateRePwdMsg}</div> : <></>}
+        <div>{validateRePwdMsg}</div>
         <button className={styles.btn}>회원가입</button>
       </div>
     </div>
