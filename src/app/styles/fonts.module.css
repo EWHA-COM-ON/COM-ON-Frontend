@@ -5,10 +5,15 @@
 
 .bar {
   font-family: 'PretendardM';
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 .placeholder {
   font-family: 'PretendardR';
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.msg {
+  font-family: 'PretendardR';
+  font-size: 0.9rem;
 }
