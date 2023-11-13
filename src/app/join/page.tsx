@@ -4,6 +4,7 @@ import styles from '@/app/styles/login.module.css';
 import fonts from '@/app/styles/fonts.module.css';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ErrorIcon from '../../../public/assets/errorIcon.svg';
 
 export default function Join() {
@@ -217,7 +218,9 @@ export default function Join() {
         <div>|</div>
         <button className={styles.routerBtn}>아이디 찾기</button>
         <div>|</div>
-        <button className={styles.routerBtn}>회원가입</button>
+        <Link href={'/login'}>
+          <button className={styles.routerBtn}>로그인</button>
+        </Link>
       </div>
     </div>
   );
