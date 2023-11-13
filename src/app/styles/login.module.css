@@ -7,9 +7,12 @@
   height: 100%;
 }
 
+.join {
+  padding-top: 150px;
+}
+
 .box {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: var(--main-white);

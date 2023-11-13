@@ -100,7 +100,7 @@ export default function Join() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.join}`}>
       <div className={styles.box}>
         <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
         <div className={styles.inputBox}>
