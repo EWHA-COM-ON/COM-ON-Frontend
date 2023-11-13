@@ -213,11 +213,11 @@ export default function Join() {
         <button className={`${styles.btn} ${fonts.bar}`}>회원가입</button>
       </div>
       <div className={`${styles.router} ${fonts.router}`}>
-        <button>비밀번호 찾기</button>
+        <button className={styles.routerBtn}>비밀번호 찾기</button>
         <div>|</div>
-        <button>아이디 찾기</button>
+        <button className={styles.routerBtn}>아이디 찾기</button>
         <div>|</div>
-        <button>회원가입</button>
+        <button className={styles.routerBtn}>회원가입</button>
       </div>
     </div>
   );
