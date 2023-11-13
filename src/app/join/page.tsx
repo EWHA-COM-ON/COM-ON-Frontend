@@ -82,42 +82,42 @@ export default function Join() {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
+        <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이름</div>
         <input
           className={`${styles.inputBox} ${fonts.placeholder}`}
           type="text"
           id="name"
-          placeholder="이름"
           onChange={handleInputName}
         />
+        <div className={`${styles.subtTitle} ${fonts.placeholder}`}>학번</div>
         <input
           className={`${styles.inputBox} ${fonts.placeholder}`}
           type="text"
           id="schoolNum"
-          placeholder="학번"
           onChange={handleInputSchoolNum}
         />
         <div>(ex.2071022)</div>
+        <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
         <input
           className={`${styles.inputBox} ${fonts.placeholder}`}
           type="text"
           id="id"
-          placeholder="아이디"
           onChange={handleInputId}
         />
         <div>{validateIdMsg}</div>
+        <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호</div>
         <input
           className={`${styles.inputBox} ${fonts.placeholder}`}
           type="password"
           id="pwd"
-          placeholder="비밀번호"
           onChange={handleInputPwd}
         />
         <div>{validatePwdMsg}</div>
+        <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호 확인</div>
         <input
           className={`${styles.inputBox} ${fonts.placeholder}`}
           type="password"
           id="rePwd"
-          placeholder="비밀번호 확인"
           onChange={handleInputRePwd}
         />
         <div>{validateRePwdMsg}</div>
