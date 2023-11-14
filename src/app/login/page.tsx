@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.loginContainer}>
       <div className={styles.column}>
         <div className={styles.box}>
           <div className={`${styles.title} ${fonts.title}`}>로그인</div>
