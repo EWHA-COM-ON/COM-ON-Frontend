@@ -135,6 +135,37 @@ export default function Join() {
     }
   };
 
+  const onClickBtn = () => {
+    if (name == '') {
+      setIsValidateName(false);
+      setValidateNameMsg('이름을 입력해 주세요.');
+    }
+    if (schoolNum == 0) {
+      setIsValidateSchoolNum(false);
+      setValidateSchoolNumMsg('학번을 입력해 주세요.');
+    }
+    if (email == '') {
+      setIsValidateEmail(false);
+      setValidateEmailMsg('이메일을 입력해 주세요.');
+    }
+    if (phoneNum == 0) {
+      setIsValidatePhoneNum(false);
+      setValidatePhoneNumMsg('전화번호를 입력해 주세요.');
+    }
+    if (id == '') {
+      setIsValidateId(false);
+      setValidateIdMsg('아이디를 입력해 주세요.');
+    }
+    if (password == '') {
+      setIsValidatePwd(false);
+      setValidatePwdMsg('비밀번호를 입력해 주세요.');
+    }
+    if (rePassword == '') {
+      setIsValidateRePwd(false);
+      setValidateRePwdMsg('비밀번호를 입력해 주세요.');
+    }
+  };
+
   return (
     <div className={styles.joinContainer}>
       <div className={styles.column}>
@@ -297,7 +328,9 @@ export default function Join() {
               {validateRePwdMsg}
             </div>
           </div>
-          <button className={`${styles.btn} ${fonts.bar}`}>회원가입</button>
+          <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
+            회원가입
+          </button>
         </div>
         <div className={`${styles.router} ${fonts.router}`}>
           <button className={styles.routerBtn}>비밀번호 찾기</button>
