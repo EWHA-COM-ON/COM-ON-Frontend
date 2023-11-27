@@ -2,10 +2,12 @@
 import styles from '@/app/styles/header.module.css';
 import fonts from '@/app/styles/fonts.module.css';
 import Link from 'next/link';
+import { getWindowSize } from '@/hook/getWindowSize';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const pathname = usePathname();
+  const {width} = getWindowSize();
 
   const barList = [
     { id: 0, name: '학생회 소개', pathname: '/' },
@@ -16,6 +18,12 @@ export default function Header() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.topBox}>
+      <div className={`${styles.loginBtn} ${fonts.router}`}>
+        <Link href={'/login'} className={styles.btn}>로그인</Link>/<Link href={'/join'} className={styles.btn}>회원가입</Link>
+      </div>
+      </div>
+      <div className = {styles.bottomBox}>
       <Link href = {'/'} className={styles.logo}>
       <img src='https://i.ibb.co/SNGMqNq/logo.png' width={234} height={44} alt="" />
       </Link>
@@ -28,9 +36,7 @@ export default function Header() {
           {pathname === bar.pathname?<div className={styles.line}></div>:<></>}
           </div>
         ))}
-      </div>
-      <div className={`${styles.loginBtn} ${fonts.router}`}>
-        <Link href={'/login'} className={styles.btn}>로그인</Link>/<Link href={'/join'} className={styles.btn}>회원가입</Link>
+        </div>
       </div>
     </div>
   );

@@ -1,15 +1,29 @@
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
-  height: 80px;
-  background: var(--main-white);
+  height: 110px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 30px 0 30px;
+}
+
+.topBox{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 30px;
+  background: var(--main-green);
+  padding: 0 40px 0 0;
+}
+
+.bottomBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  background: var(--main-white);
+  padding: 0 40px 0 40px;
 }
 
 .logo{
@@ -23,7 +37,7 @@
   height: 100%;
   width: 800px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .barSet{
@@ -44,7 +58,7 @@
 }
 
 .line{
-  height: 1.2px;
+  height: 1px;
   width: 105%;
   background: var(--main-green);
   margin-top: 6px;
@@ -56,7 +70,7 @@
   display: flex;
   height: 100%;
   align-items: center;
-  color: var(--sub-grey);
+  color: var(--light-grey);
   gap: 2px;
 }
 
