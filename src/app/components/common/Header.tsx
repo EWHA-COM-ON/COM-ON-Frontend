@@ -23,7 +23,7 @@ export default function Header() {
         {barList.map(bar => (
           <div className={styles.barSet}>
           <Link href={bar.pathname} key={bar.id}>
-            <div className={`${styles.bar} ${fonts.bar}`}>{bar.name}</div>
+            <div className={pathname === bar.pathname?`${styles.clickedBar} ${fonts.bar}`:`${styles.bar} ${fonts.bar}`}>{bar.name}</div>
           </Link>
           {pathname === bar.pathname?<div className={styles.line}></div>:<></>}
           </div>

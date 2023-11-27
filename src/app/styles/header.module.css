@@ -30,13 +30,17 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .bar {
   color: var(--main-grey);
-  cursor: pointer;
+}
+
+.clickedBar{
+  color: var(--main-green);
 }
 
 .line{
