@@ -38,6 +38,7 @@ export default function Login() {
     <div className={styles.loginContainer}>
       <div className={styles.column}>
         <div className={styles.box}>
+          <form>
           <div className={`${styles.title} ${fonts.title}`}>로그인</div>
           <div className={styles.inputBox}>
             <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
@@ -68,14 +69,15 @@ export default function Login() {
           <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
             로그인
           </button>
+          </form>
         </div>
-        <div className={`${styles.router} ${fonts.router}`}>
-          <button className={styles.routerBtn}>비밀번호 찾기</button>
-          <div>|</div>
-          <button className={styles.routerBtn}>아이디 찾기</button>
-          <div>|</div>
+        <div className={styles.router}>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>비밀번호 찾기</button>
+          <div className={fonts.router}>|</div>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>아이디 찾기</button>
+          <div className={fonts.router}>|</div>
           <Link href={'/join'}>
-            <button className={styles.routerBtn}>회원가입</button>
+            <button className={`${styles.routerBtn} ${fonts.router}`}>회원가입</button>
           </Link>
         </div>
       </div>

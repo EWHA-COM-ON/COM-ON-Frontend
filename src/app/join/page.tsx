@@ -170,6 +170,7 @@ export default function Join() {
     <div className={styles.joinContainer}>
       <div className={styles.column}>
         <div className={styles.box}>
+          <form>
           <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
           <div className={styles.inputBox}>
             <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이름</div>
@@ -318,6 +319,7 @@ export default function Join() {
               type="password"
               id="rePwd"
               onChange={handleInputRePwd}
+              autoComplete='new-password'//자동완성 금지
             />
             <div className={`${styles.msg} ${fonts.msg}`}>
               {!isValidateRePwd ? (
@@ -331,14 +333,15 @@ export default function Join() {
           <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
             회원가입
           </button>
+          </form>
         </div>
-        <div className={`${styles.router} ${fonts.router}`}>
-          <button className={styles.routerBtn}>비밀번호 찾기</button>
-          <div>|</div>
-          <button className={styles.routerBtn}>아이디 찾기</button>
-          <div>|</div>
+        <div className={styles.router}>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>비밀번호 찾기</button>
+          <div className={fonts.router}>|</div>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>아이디 찾기</button>
+          <div className={fonts.router}>|</div>
           <Link href={'/login'}>
-            <button className={styles.routerBtn}>로그인</button>
+            <button className={`${styles.routerBtn} ${fonts.router}`}>로그인</button>
           </Link>
         </div>
       </div>
