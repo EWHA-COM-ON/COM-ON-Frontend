@@ -1,29 +1,30 @@
+
 .title {
-  font-family: 'PretendardM';
-  font-size: 1.8rem;
-}
-
-.bar {
-  font-family: 'PretendardM';
-  font-size: 1.35rem;
-}
-
-.placeholder {
-  font-family: 'PretendardR';
-  font-size: 1.2rem;
-}
-
-.email {
-  font-family: 'PretendardR';
-  font-size: 1.3rem;
-}
-
-.msg {
-  font-family: 'PretendardR';
-  font-size: 0.9rem;
-}
-
-.router {
-  font-family: 'PretendardM';
-  font-size: 1rem;
-}
+    font-family: 'PretendardM';
+    font-size: 1.8rem;
+  }
+  
+  .bar {
+    font-family: 'PretendardM';
+    font-size: 1.3rem;
+  }
+  
+  .placeholder {
+    font-family: 'PretendardR';
+    font-size: 1.2rem;
+  }
+  
+  .email {
+    font-family: 'PretendardR';
+    font-size: 1.3rem;
+  }
+  
+  .msg {
+    font-family: 'PretendardR';
+    font-size: 0.9rem;
+  }
+  
+  .router {
+    font-family: 'PretendardM';
+    font-size: 1rem;
+  }

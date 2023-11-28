@@ -1,9 +1,19 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './styles/globals.css';
 import Header from '@/app/components/common/Header';
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ['latin'] });
+const pretendardM = localFont({
+  src: './fonts/Pretendard-Medium.otf',
+  weight: 'normal',
+  style: 'normal'
+});
+
+const pretendardR = localFont({
+  src: './fonts/Pretendard-Regular.otf',
+  weight: 'normal',
+  style: 'normal'
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Header />
-      <body className={inter.className}>{children}</body>
+      <body className={`${pretendardM.className} ${pretendardR.className}`}>{children}</body>
     </html>
   );
 }

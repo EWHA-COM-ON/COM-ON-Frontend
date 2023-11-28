@@ -2,19 +2,18 @@
 import styles from '@/app/styles/header.module.css';
 import fonts from '@/app/styles/fonts.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import {useState} from 'react';
 import { getWindowSize } from '@/hook/getWindowSize';
 import { usePathname } from 'next/navigation';
+import BarIcon from '../../../../public/assets/barIcon.svg';
+import { barList } from './data/data';
+import ModalBar from './ModalBar';
 
 export default function Header() {
   const pathname = usePathname();
   const {width} = getWindowSize();
-
-  const barList = [
-    { id: 0, name: '학생회 소개', pathname: '/' },
-    { id: 1, name: '학생회 정보', pathname: '/' },
-    { id: 2, name: '질문 게시판', pathname: '/' },
-    { id: 3, name: '행사 신청', pathname: '/' },
-  ];
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
@@ -27,16 +26,17 @@ export default function Header() {
       <Link href = {'/'} className={styles.logo}>
       <img src='https://i.ibb.co/SNGMqNq/logo.png' width={234} height={44} alt="" />
       </Link>
+      {width >= 1000?
       <div className={styles.barList}>
-        {barList.map(bar => (
-          <div className={styles.barSet}>
-          <Link href={bar.pathname} key={bar.id}>
+        {barList.map((bar,idx) => (
+          <div className={styles.barSet} key={idx}>
+          <Link href={bar.pathname}>
             <div className={pathname === bar.pathname?`${styles.clickedBar} ${fonts.bar}`:`${styles.bar} ${fonts.bar}`}>{bar.name}</div>
           </Link>
           {pathname === bar.pathname?<div className={styles.line}></div>:<></>}
           </div>
         ))}
-        </div>
+        </div>:<>{isClicked? <ModalBar isClicked={isClicked} setIsClicked={setIsClicked} />:<div className={styles.barIcon}> <Image src={BarIcon} width={30} height={30} alt='' key='barIcon' onClick={() => setIsClicked(!isClicked)}/></div> }</>}
       </div>
     </div>
   );

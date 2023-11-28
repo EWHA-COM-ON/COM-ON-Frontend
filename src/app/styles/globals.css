@@ -11,16 +11,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'PretendardM';
-  src: url('/public/fonts/Pretendard-Medium.otf');
-}
-
-@font-face {
-  font-family: 'PretendardR';
-  src: url('/public/fonts/Pretendard-Regular.otf');
-}
-
 html,
 body {
   width: 100%;
