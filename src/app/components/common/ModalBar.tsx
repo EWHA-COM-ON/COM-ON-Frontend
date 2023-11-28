@@ -16,7 +16,7 @@ export default function ModalBar({isClicked, setIsClicked}:modalBarProps){
     
     return(
         <div className={styles.columnBarModal}>
-      <div className={`${styles.modalTitleBox} ${fonts.subTitle}`}><Image src = {Delete} width={18} height={18} alt='' onClick={()=>setIsClicked(!isClicked)} className={styles.deleteBtn}/>이화여자대학교 컴퓨터공학전공 학생회</div>
+      <div className={`${styles.modalTitleBox} ${fonts.subTitle}`}><div className={styles.deleteBtnBox}><Image src = {Delete} width={18} height={18} alt='' onClick={()=>setIsClicked(!isClicked)} className={styles.deleteBtn}/></div>이화여자대학교 컴퓨터공학전공 학생회</div>
       <div className={styles.modalBarBox}>
       {barList.map((bar,idx) => (
         <Link href={bar.pathname} key={idx} className={pathname === bar.pathname?`${styles.columnClickedBar} ${fonts.bar}`:`${styles.columnBar} ${fonts.bar}`}>

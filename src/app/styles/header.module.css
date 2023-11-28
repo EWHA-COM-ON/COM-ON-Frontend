@@ -50,7 +50,7 @@
   justify-content: space-between;
   width: 100%;
   height: 50%;
-  padding: 20px 0 20px 20px;
+  padding: 20px 20px 20px 20px;
   background: var(--main-white);
   color: var(--main-white);
   background: var(--main-green);
@@ -62,6 +62,12 @@
   justify-content: space-between;
   width: 100%;
   height: 50%;
+}
+
+.deleteBtnBox{
+  display: flex;
+  width: 100%;
+  justify-content: end;
 }
 
 .deleteBtn{
@@ -97,6 +103,7 @@
   height: 100%;
   width: 100%;
   background: var(--bar-grey);
+  border: 0;
 }
 
 .columnClickedBar{
@@ -108,6 +115,7 @@
   width: 100%;
   background: var(--bar-grey);
   color: var(--main-green);
+  border: 0;
 }
 
 .barIcon{
