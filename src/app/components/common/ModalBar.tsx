@@ -3,6 +3,8 @@ import fonts from '@/app/styles/fonts.module.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { barList } from './data/data';
+import Delete from '../../../../public/assets/deleteIcon.svg';
+import Image from 'next/image';
 
 interface modalBarProps{
     isClicked: boolean;
@@ -13,15 +15,13 @@ export default function ModalBar({isClicked, setIsClicked}:modalBarProps){
     const pathname = usePathname();
     
     return(
-        <div className={styles.columnBarModal}><div><div className={styles.topBox}>
-      <div className={`${styles.loginBtn} ${fonts.router}`}>
-        <Link href={'/login'} className={styles.btn}>로그인</Link>/<Link href={'/join'} className={styles.btn}>회원가입</Link>
-      </div>
-      </div>
-      <div className={styles.modalTitleBox}></div></div>{barList.map((bar,idx) => (
-        <Link href={bar.pathname} key={idx}>
-          <div className={pathname === bar.pathname?`${styles.columnClickedBar} ${fonts.bar}`:`${styles.columnBar} ${fonts.bar}`} onClick={() => setIsClicked(!isClicked)}>{bar.name}</div>
+        <div className={styles.columnBarModal}>
+      <div className={`${styles.modalTitleBox} ${fonts.subTitle}`}><Image src = {Delete} width={18} height={18} alt='' onClick={()=>setIsClicked(!isClicked)} className={styles.deleteBtn}/>이화여자대학교 컴퓨터공학전공 학생회</div>
+      <div className={styles.modalBarBox}>
+      {barList.map((bar,idx) => (
+        <Link href={bar.pathname} key={idx} className={pathname === bar.pathname?`${styles.columnClickedBar} ${fonts.bar}`:`${styles.columnBar} ${fonts.bar}`}>
+          <div onClick={() => setIsClicked(!isClicked)}>{bar.name}</div>
         </Link>
-      ))}</div>
+      ))}</div></div>
     );
 }

@@ -335,13 +335,13 @@ export default function Join() {
           </button>
           </form>
         </div>
-        <div className={`${styles.router} ${fonts.router}`}>
-          <button className={styles.routerBtn}>비밀번호 찾기</button>
-          <div>|</div>
-          <button className={styles.routerBtn}>아이디 찾기</button>
-          <div>|</div>
+        <div className={styles.router}>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>비밀번호 찾기</button>
+          <div className={fonts.router}>|</div>
+          <button className={`${styles.routerBtn} ${fonts.router}`}>아이디 찾기</button>
+          <div className={fonts.router}>|</div>
           <Link href={'/login'}>
-            <button className={styles.routerBtn}>로그인</button>
+            <button className={`${styles.routerBtn} ${fonts.router}`}>로그인</button>
           </Link>
         </div>
       </div>

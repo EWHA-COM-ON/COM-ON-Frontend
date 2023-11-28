@@ -1,6 +1,7 @@
 :root {
   --main-grey: #363636;
   --sub-grey: #686868;
+  --bar-grey: #f1f1f1;
   --light-grey: #c1c1c1;
   --main-green: #00462a;
   --main-white: #ffffff;
@@ -9,6 +10,27 @@
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'PretendardM';
+  src: url('../../../public/fonts/Pretendard-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PretendardR';
+  src: url('../../../public/fonts/Pretendard-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ewha';
+  src: url('../../../public/fonts/ewha.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,

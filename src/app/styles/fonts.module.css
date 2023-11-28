@@ -1,9 +1,14 @@
 
-.title {
+  .title {
     font-family: 'PretendardM';
     font-size: 1.8rem;
   }
-  
+
+  .subTitle{
+    font-family: 'Ewha';
+    font-size: 1.6rem;
+  }
+
   .bar {
     font-family: 'PretendardM';
     font-size: 1.3rem;
@@ -19,12 +24,13 @@
     font-size: 1.3rem;
   }
   
+  .router {
+    font-family: 'PretendardR';
+    font-size: 1.1rem;
+  }
+
   .msg {
     font-family: 'PretendardR';
     font-size: 0.9rem;
   }
   
-  .router {
-    font-family: 'PretendardM';
-    font-size: 1rem;
-  }

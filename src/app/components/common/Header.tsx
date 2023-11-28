@@ -31,9 +31,8 @@ export default function Header() {
         {barList.map((bar,idx) => (
           <div className={styles.barSet} key={idx}>
           <Link href={bar.pathname}>
-            <div className={pathname === bar.pathname?`${styles.clickedBar} ${fonts.bar}`:`${styles.bar} ${fonts.bar}`}>{bar.name}</div>
+            <div className={`${styles.bar} ${fonts.bar}`}>{bar.name}</div>
           </Link>
-          {pathname === bar.pathname?<div className={styles.line}></div>:<></>}
           </div>
         ))}
         </div>:<>{isClicked? <ModalBar isClicked={isClicked} setIsClicked={setIsClicked} />:<div className={styles.barIcon}> <Image src={BarIcon} width={30} height={30} alt='' key='barIcon' onClick={() => setIsClicked(!isClicked)}/></div> }</>}
