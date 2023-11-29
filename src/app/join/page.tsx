@@ -167,172 +167,214 @@ export default function Join() {
   };
 
   return (
-    <div className={styles.joinContainer}>
+    <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.box}>
           <form>
-          <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이름</div>
-            <input
-              className={
-                isValidateName
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="text"
-              id="name"
-              onChange={handleInputName}
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {!isValidateName ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validateNameMsg}
-            </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>학번</div>
-            <input
-              className={
-                isValidateSchoolNum
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="number"
-              id="schoolNum"
-              placeholder="ex.2071022"
-              onChange={handleInputSchoolNum}
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {!isValidateSchoolNum ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validateSchoolNumMsg}
-            </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이메일</div>
-            <div className={styles.email}>
+            <div className={`${styles.title} ${fonts.title}`}>회원가입</div>
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이름</div>
               <input
                 className={
-                  isValidateEmail
+                  isValidateName
                     ? `${styles.input} ${fonts.placeholder}`
                     : `${styles.errorInput} ${fonts.placeholder}`
                 }
                 type="text"
-                id="email"
-                onChange={handleInputEmail}
+                id="name"
+                onChange={handleInputName}
               />
-              <div
-                className={isValidateEmail ? fonts.email : `${fonts.email} ${styles.errorEmail}`}
-              >
-                @ewhain.net
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {!isValidateName ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validateNameMsg}
               </div>
             </div>
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {!isValidateEmail ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validateEmailMsg}
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>학번</div>
+              <input
+                className={
+                  isValidateSchoolNum
+                    ? `${styles.input} ${fonts.placeholder}`
+                    : `${styles.errorInput} ${fonts.placeholder}`
+                }
+                type="number"
+                id="schoolNum"
+                placeholder="ex.2071022"
+                onChange={handleInputSchoolNum}
+              />
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {!isValidateSchoolNum ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validateSchoolNumMsg}
+              </div>
             </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>전화번호</div>
-            <input
-              className={
-                isValidatePhoneNum
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="number"
-              id="tel"
-              onChange={handleInputPhoneNum}
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {!isValidatePhoneNum ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validatePhoneNumMsg}
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>이메일</div>
+              <div className={styles.email}>
+                <input
+                  className={
+                    isValidateEmail
+                      ? `${styles.input} ${fonts.placeholder}`
+                      : `${styles.errorInput} ${fonts.placeholder}`
+                  }
+                  type="text"
+                  id="email"
+                  onChange={handleInputEmail}
+                />
+                <div
+                  className={isValidateEmail ? fonts.email : `${fonts.email} ${styles.errorEmail}`}
+                >
+                  @ewhain.net
+                </div>
+              </div>
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {!isValidateEmail ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validateEmailMsg}
+              </div>
             </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
-            <input
-              className={
-                isValidateId
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="text"
-              id="id"
-              onChange={handleInputId}
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {' '}
-              {!isValidateId ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validateIdMsg}
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>전화번호</div>
+              <input
+                className={
+                  isValidatePhoneNum
+                    ? `${styles.input} ${fonts.placeholder}`
+                    : `${styles.errorInput} ${fonts.placeholder}`
+                }
+                type="number"
+                id="tel"
+                onChange={handleInputPhoneNum}
+              />
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {!isValidatePhoneNum ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validatePhoneNumMsg}
+              </div>
             </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호</div>
-            <input
-              className={
-                isValidatePwd
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="password"
-              id="pwd"
-              onChange={handleInputPwd}
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {' '}
-              {!isValidatePwd ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validatePwdMsg}
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
+              <input
+                className={
+                  isValidateId
+                    ? `${styles.input} ${fonts.placeholder}`
+                    : `${styles.errorInput} ${fonts.placeholder}`
+                }
+                type="text"
+                id="id"
+                onChange={handleInputId}
+              />
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {' '}
+                {!isValidateId ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validateIdMsg}
+              </div>
             </div>
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호 확인</div>
-            <input
-              className={
-                isValidateRePwd
-                  ? `${styles.input} ${fonts.placeholder}`
-                  : `${styles.errorInput} ${fonts.placeholder}`
-              }
-              type="password"
-              id="rePwd"
-              onChange={handleInputRePwd}
-              autoComplete='new-password'//자동완성 금지
-            />
-            <div className={`${styles.msg} ${fonts.msg}`}>
-              {!isValidateRePwd ? (
-                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-              ) : (
-                <></>
-              )}
-              {validateRePwdMsg}
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호</div>
+              <input
+                className={
+                  isValidatePwd
+                    ? `${styles.input} ${fonts.placeholder}`
+                    : `${styles.errorInput} ${fonts.placeholder}`
+                }
+                type="password"
+                id="pwd"
+                onChange={handleInputPwd}
+              />
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {' '}
+                {!isValidatePwd ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validatePwdMsg}
+              </div>
             </div>
-          </div>
-          <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
-            회원가입
-          </button>
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호 확인</div>
+              <input
+                className={
+                  isValidateRePwd
+                    ? `${styles.input} ${fonts.placeholder}`
+                    : `${styles.errorInput} ${fonts.placeholder}`
+                }
+                type="password"
+                id="rePwd"
+                onChange={handleInputRePwd}
+                autoComplete="new-password" //자동완성 금지
+              />
+              <div className={`${styles.msg} ${fonts.msg}`}>
+                {!isValidateRePwd ? (
+                  <Image
+                    src={ErrorIcon}
+                    width={13}
+                    height={13}
+                    alt=""
+                    className={styles.errorIcon}
+                  />
+                ) : (
+                  <></>
+                )}
+                {validateRePwdMsg}
+              </div>
+            </div>
+            <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
+              회원가입
+            </button>
           </form>
         </div>
         <div className={styles.router}>

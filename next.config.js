@@ -6,6 +6,7 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
+      loader: 'babel-loader'
     });
     return config;
   },

@@ -35,40 +35,40 @@ export default function Login() {
   };
 
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.box}>
           <form>
-          <div className={`${styles.title} ${fonts.title}`}>로그인</div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
-            <input
-              className={`${styles.input} ${fonts.placeholder}`}
-              type="text"
-              id="id"
-              onChange={handleInputId}
-            />
-          </div>
-          <div className={styles.inputBox}>
-            <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호</div>
-            <input
-              className={`${styles.input} ${fonts.placeholder}`}
-              type="password"
-              id="pwd"
-              onChange={handleInputPwd}
-            />
-          </div>
-          <div className={`${styles.msg} ${fonts.msg}`}>
-            {isValidate ? (
-              <></>
-            ) : (
-              <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
-            )}
-            {errorMsg}
-          </div>
-          <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
-            로그인
-          </button>
+            <div className={`${styles.title} ${fonts.title}`}>로그인</div>
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>아이디</div>
+              <input
+                className={`${styles.input} ${fonts.placeholder}`}
+                type="text"
+                id="id"
+                onChange={handleInputId}
+              />
+            </div>
+            <div className={styles.inputBox}>
+              <div className={`${styles.subtTitle} ${fonts.placeholder}`}>비밀번호</div>
+              <input
+                className={`${styles.input} ${fonts.placeholder}`}
+                type="password"
+                id="pwd"
+                onChange={handleInputPwd}
+              />
+            </div>
+            <div className={`${styles.msg} ${fonts.msg}`}>
+              {isValidate ? (
+                <></>
+              ) : (
+                <Image src={ErrorIcon} width={13} height={13} alt="" className={styles.errorIcon} />
+              )}
+              {errorMsg}
+            </div>
+            <button className={`${styles.btn} ${fonts.bar}`} onClick={onClickBtn}>
+              로그인
+            </button>
           </form>
         </div>
         <div className={styles.router}>

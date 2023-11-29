@@ -9,7 +9,7 @@
   right: 0;
 }
 
-.topBox{
+.topBox {
   display: flex;
   flex-direction: row-reverse;
   height: 30px;
@@ -17,7 +17,7 @@
   padding: 0 20px 0 0;
 }
 
-.bottomBox{
+.bottomBox {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,17 +26,17 @@
   padding: 0 20px 0 20px;
 }
 
-.logo{
+.logo {
   display: flex;
   height: 100%;
   align-items: center;
 }
 
-.columnBarModal{
+.columnBarModal {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -44,7 +44,7 @@
   bottom: 0;
 }
 
-.modalTitleBox{
+.modalTitleBox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,7 +56,7 @@
   background: var(--main-green);
 }
 
-.modalBarBox{
+.modalBarBox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -64,13 +64,13 @@
   height: 50%;
 }
 
-.deleteBtnBox{
+.deleteBtnBox {
   display: flex;
   width: 100%;
   justify-content: end;
 }
 
-.deleteBtn{
+.deleteBtn {
   cursor: pointer;
 }
 
@@ -82,7 +82,7 @@
   justify-content: space-around;
 }
 
-.barSet{
+.barSet {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -95,7 +95,7 @@
   color: var(--main-grey);
 }
 
-.columnBar{
+.columnBar {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -106,7 +106,7 @@
   border: 0;
 }
 
-.columnClickedBar{
+.columnClickedBar {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -118,7 +118,7 @@
   border: 0;
 }
 
-.barIcon{
+.barIcon {
   display: flex;
   align-items: center;
   height: 100%;
