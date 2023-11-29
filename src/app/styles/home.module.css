@@ -1,47 +1,76 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin-top: 110px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 110px;
+  padding-bottom: 30px;
 }
 
-.bannerBox{
-    width: 100%;
-    height: 340px;
-    background: var(--light-grey);
+.bannerBox {
+  width: 100%;
+  height: 340px;
+  background: var(--light-grey);
 }
 
-.wrapBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 38px;
-    row-gap: 20px;
-    width: 100%;
-    height: auto;
-    margin-top: 40px;
+.wrapBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 38px;
+  row-gap: 20px;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
 }
 
-.btnBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 142px;
-    border-radius: 15px;
-    border: transparent;
-    background: var(--main-white);
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.025);
+.btnBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 142px;
+  border-radius: 15px;
+  border: transparent;
+  background: var(--main-white);
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.025);
 }
 
-.routerText{
-    color: var(--main-grey);
+.btnBox:hover {
+  transform: scale(1.025);
+  transition-duration: 0.5s;
 }
 
-.routerSubText{
-    color: var(--sub-grey);
-    margin-top: 8px;
+.routerText {
+  color: var(--main-grey);
+}
+
+.routerSubText {
+  color: var(--sub-grey);
+  margin-top: 10px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+  width: 738px;
+  margin-top: 56px;
+}
+
+.smallerEvent {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-top: 56px;
+}
+
+.eventBox {
+  width: 100%;
+  height: 276px;
+  border-radius: 15px;
+  background: var(--main-white);
+  margin-top: 11px;
 }
