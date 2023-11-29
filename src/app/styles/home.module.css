@@ -33,7 +33,7 @@
   align-items: center;
   width: 350px;
   height: 142px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: transparent;
   background: var(--main-white);
   box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.025);
@@ -70,7 +70,7 @@
 .eventBox {
   width: 100%;
   height: 276px;
-  border-radius: 15px;
+  border-radius: 10px;
   background: var(--main-white);
   margin-top: 11px;
 }
