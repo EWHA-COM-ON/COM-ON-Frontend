@@ -44,10 +44,6 @@
   transition-duration: 0.5s;
 }
 
-.routerText {
-  color: var(--main-grey);
-}
-
 .routerSubText {
   color: var(--sub-grey);
   margin-top: 10px;
@@ -67,10 +63,22 @@
   margin-top: 56px;
 }
 
+.greyText {
+  color: var(--main-grey);
+}
+
 .eventBox {
   width: 100%;
-  height: 276px;
   border-radius: 10px;
   background: var(--main-white);
   margin-top: 11px;
+  color: var(--main-grey);
+  padding: 25px 32px;
+}
+
+.eventText {
+  margin-top: 12px;
+  color: var(--main-grey);
+  line-height: 25px;
+  padding-left: 10px;
 }
