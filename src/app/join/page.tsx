@@ -167,7 +167,7 @@ export default function Join() {
   };
 
   return (
-    <div className={styles.joinContainer}>
+    <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.box}>
           <form>

@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <div className={styles.loginContainer}>
+    <div className={styles.container}>
       <div className={styles.column}>
         <div className={styles.box}>
           <form>

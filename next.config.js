@@ -4,6 +4,7 @@ const withImages = require('next-images'); //Image를 사용할 때 필요! _ �
 const nextConfig = {
   webpack: (config, options) => {
     config.module.rules.push({
+      loader: 'file-loader',
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
