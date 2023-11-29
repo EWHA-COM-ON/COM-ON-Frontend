@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 110px;
+  padding: 0 50px 30px 50px;
+}
