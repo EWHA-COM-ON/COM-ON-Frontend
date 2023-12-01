@@ -2,10 +2,10 @@
 import styles from './styles/home.module.css';
 import fonts from './styles/fonts.module.css';
 import Link from 'next/link';
-import { getWindowSize } from '@/hook/getWindowSize';
+import { UseWindowSize } from '@/hook/UseWindowSize';
 
 export default function Home() {
-  const { width } = getWindowSize();
+  const { width } = UseWindowSize();
 
   return (
     <div className={styles.container}>

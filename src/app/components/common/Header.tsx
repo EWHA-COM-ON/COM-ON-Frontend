@@ -4,7 +4,7 @@ import fonts from '@/app/styles/fonts.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { getWindowSize } from '@/hook/getWindowSize';
+import { UseWindowSize } from '@/hook/UseWindowSize';
 import { usePathname } from 'next/navigation';
 import BarIcon from '../../../../public/assets/barIcon.svg';
 import { barList } from './data/data';
@@ -12,7 +12,7 @@ import ModalBar from './ModalBar';
 
 export default function Header() {
   const pathname = usePathname();
-  const { width } = getWindowSize();
+  const { width } = UseWindowSize();
   const [isClicked, setIsClicked] = useState<boolean>(false);
 
   return (
