@@ -122,4 +122,5 @@
 
 .routerBtn {
   color: var(--sub-grey);
+  background: transparent;
 }
