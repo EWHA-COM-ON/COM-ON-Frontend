@@ -31,7 +31,7 @@
 }
 
 .input {
-  -webkit-border: none;
+  -webkit-appearance: none;
   width: 100%;
   height: 30px;
   border: none;
