@@ -39,8 +39,9 @@ export default function ModalBar({ isClicked, setIsClicked }: modalBarProps) {
                 ? `${styles.columnClickedBar} ${fonts.bar}`
                 : `${styles.columnBar} ${fonts.bar}`
             }
+            onClick={() => setIsClicked(!isClicked)}
           >
-            <div onClick={() => setIsClicked(!isClicked)}>{bar.name}</div>
+            <div>{bar.name}</div>
           </Link>
         ))}
       </div>
