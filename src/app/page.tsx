@@ -7,54 +7,42 @@ import { useQuery } from 'react-query';
 import { getScheduleList } from './api/home';
 import { useState } from 'react';
 
-export default function Home() {
-  const checkMonth = (date: string) => {
-    const dateSplit = date.split('-');
-    return dateSplit[1];
-  };
+type schedule = {
+  name: string;
+  info: string;
+  date: Date;
+};
 
+export default function Home() {
   const { width } = getWindowSize();
-  const [january, setJanuary] = useState<[]>([]);
-  const [february, setFebruary] = useState<[]>([]);
-  const [march, setMarch] = useState<[]>([]);
-  const [april, setApril] = useState<[]>([]);
-  const [may, setMay] = useState<[]>([]);
-  const [june, setJune] = useState<[]>([]);
-  const [july, setJuly] = useState<[]>([]);
-  const [august, setAugust] = useState<[]>([]);
-  const [september, setSeptember] = useState<[]>([]);
-  const [october, setOctober] = useState<[]>([]);
-  const [november, setNovember] = useState<[]>([]);
-  const [december, setDecember] = useState<[]>([]);
+  const [january, setJanuary] = useState<schedule[]>([]);
+  const [february, setFebruary] = useState<schedule[]>([]);
+  const [march, setMarch] = useState<schedule[]>([]);
+  const [april, setApril] = useState<schedule[]>([]);
+  const [may, setMay] = useState<schedule[]>([]);
+  const [june, setJune] = useState<schedule[]>([]);
+  const [july, setJuly] = useState<schedule[]>([]);
+  const [august, setAugust] = useState<schedule[]>([]);
+  const [september, setSeptember] = useState<schedule[]>([]);
+  const [october, setOctober] = useState<schedule[]>([]);
+  const [november, setNovember] = useState<schedule[]>([]);
+  const [december, setDecember] = useState<schedule[]>([]);
 
   const { data } = useQuery(['scheduleList'], () => getScheduleList(), {
     onSuccess: data => {
       console.log(data);
-      if (checkMonth(data.date.toString()) === '01') {
-        setJanuary(data);
-      } else if (checkMonth(data.date.toString()) === '02') {
-        setFebruary(data);
-      } else if (checkMonth(data.date.toString()) === '03') {
-        setMarch(data);
-      } else if (checkMonth(data.date.toString()) === '04') {
-        setApril(data);
-      } else if (checkMonth(data.date.toString()) === '05') {
-        setMay(data);
-      } else if (checkMonth(data.date.toString()) === '06') {
-        setJune(data);
-      } else if (checkMonth(data.date.toString()) === '07') {
-        setJuly(data);
-      } else if (checkMonth(data.date.toString()) === '08') {
-        setAugust(data);
-      } else if (checkMonth(data.date.toString()) === '09') {
-        setSeptember(data);
-      } else if (checkMonth(data.date.toString()) === '10') {
-        setOctober(data);
-      } else if (checkMonth(data.date.toString()) === '11') {
-        setNovember(data);
-      } else if (checkMonth(data.date.toString()) === '12') {
-        setDecember(data);
-      }
+      setJanuary(data.January);
+      setFebruary(data);
+      setMarch(data);
+      setApril(data);
+      setMay(data);
+      setJune(data);
+      setJuly(data);
+      setAugust(data);
+      setSeptember(data);
+      setOctober(data);
+      setNovember(data);
+      setDecember(data);
     },
     onError: error => {
       console.log(error);
@@ -89,7 +77,9 @@ export default function Home() {
         <div className={styles.eventBox}>
           <div className={`${fonts.smallM} ${styles.greyText}`}>1월</div>
           <div className={`${fonts.placeholder} ${styles.eventText}`}>
-            {january.map(data => data)}
+            {january?.map(data => (
+              <>{data.name}</>
+            ))}
           </div>
         </div>
       </div>
