@@ -32,17 +32,17 @@ export default function Home() {
     onSuccess: data => {
       console.log(data);
       setJanuary(data.January);
-      setFebruary(data);
-      setMarch(data);
-      setApril(data);
-      setMay(data);
-      setJune(data);
-      setJuly(data);
-      setAugust(data);
-      setSeptember(data);
-      setOctober(data);
-      setNovember(data);
-      setDecember(data);
+      setFebruary(data.February);
+      setMarch(data.March);
+      setApril(data.April);
+      setMay(data.May);
+      setJune(data.June);
+      setJuly(data.July);
+      setAugust(data.August);
+      setSeptember(data.September);
+      setOctober(data.October);
+      setNovember(data.November);
+      setDecember(data.December);
     },
     onError: error => {
       console.log(error);
@@ -76,11 +76,125 @@ export default function Home() {
         <div className={`${styles.greyText} ${fonts.bar}`}>행사 일정</div>
         <div className={styles.eventBox}>
           <div className={`${fonts.smallM} ${styles.greyText}`}>1월</div>
-          <div className={`${fonts.placeholder} ${styles.eventText}`}>
-            {january?.map(data => (
-              <>{data.name}</>
-            ))}
-          </div>
+          {january === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {january.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>2월</div>
+          {february === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {february.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>3월</div>
+          {march === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {march.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>4월</div>
+          {april === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {april.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>5월</div>
+          {may === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {may.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>6월</div>
+          {june === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {june.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>7월</div>
+          {july === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {july.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>8월</div>
+          {august === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {august.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>9월</div>
+          {september === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {september.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>10월</div>
+          {october === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {october.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>11월</div>
+          {november === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {november.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
+          <div className={`${fonts.smallM} ${styles.greyText}`}>12월</div>
+          {december === undefined ? (
+            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+          ) : (
+            <>
+              {december.map(data => (
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+              ))}
+            </>
+          )}
         </div>
       </div>
     </div>
