@@ -10,7 +10,7 @@ import { useState } from 'react';
 type schedule = {
   name: string;
   info: string;
-  date: Date;
+  date: string;
 };
 
 export default function Home() {
@@ -27,6 +27,13 @@ export default function Home() {
   const [october, setOctober] = useState<schedule[]>([]);
   const [november, setNovember] = useState<schedule[]>([]);
   const [december, setDecember] = useState<schedule[]>([]);
+
+  const dateForm = (date: string) => {
+    const dateSplit = date.split('-');
+    const month = dateSplit[1];
+    const day = dateSplit[2];
+    return month + '/' + day;
+  };
 
   const { data } = useQuery(['scheduleList'], () => getScheduleList(), {
     onSuccess: data => {
@@ -77,121 +84,181 @@ export default function Home() {
         <div className={styles.eventBox}>
           <div className={`${fonts.smallM} ${styles.greyText}`}>1월</div>
           {january === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {january.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>2월</div>
           {february === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {february.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>3월</div>
           {march === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {march.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>4월</div>
           {april === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {april.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>5월</div>
           {may === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {may.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>6월</div>
           {june === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {june.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>7월</div>
           {july === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {july.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>8월</div>
           {august === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {august.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>9월</div>
           {september === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {september.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>10월</div>
           {october === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {october.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>11월</div>
           {november === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {november.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}
           <div className={`${fonts.smallM} ${styles.greyText}`}>12월</div>
           {december === undefined ? (
-            <div className={`${fonts.placeholder} ${styles.eventText}`}>일정이 없습니다.</div>
+            <div className={`${fonts.placeholder} ${styles.eventText} ${styles.lightText}`}>
+              일정이 없습니다.
+            </div>
           ) : (
             <>
               {december.map(data => (
-                <div className={`${fonts.placeholder} ${styles.eventText}`}>{data.name}</div>
+                <div className={`${fonts.placeholder} ${styles.eventText}`}>
+                  <div className={styles.lightText}>{dateForm(data.date)}</div>
+                  {data.name}
+                </div>
               ))}
             </>
           )}

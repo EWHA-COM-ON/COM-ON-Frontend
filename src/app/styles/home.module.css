@@ -77,8 +77,15 @@
 }
 
 .eventText {
-  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0;
   color: var(--main-grey);
-  line-height: 25px;
+  line-height: 20px;
   padding-left: 10px;
+}
+
+.lightText {
+  margin-right: 15px;
+  color: var(--sub-grey);
 }
